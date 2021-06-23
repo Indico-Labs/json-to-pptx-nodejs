@@ -1,20 +1,23 @@
 var request = require('request');
-var data = require('./data')
+const fs = require('fs');
 
-var token = ''
+var data = require('./example_data/bar.json')
+
+var token = 'YOUR_TOKEN'
 
 var options = {
   'method': 'POST',
-  'url': 'https://api.pptxbuilder.com/api/v2/convert_data_to_pptx',
+  'url': 'https://staging-api-pptxbuilder.herokuapp.com/api/v1/convert',
   'headers': {
-    'Authorization': 'Bearer '+token
+    'Authorization': 'Bearer '+token,
+    'Content-Type': 'application/json'
   },
-  formData: {
-    'json_data': JSON.stringify(data),
-    'pptx_file' : ''
-}
+  'encoding': null,
+  'body' : JSON.stringify(data)
 };
 request(options, function (error, response) {
   if (error) throw new Error(error);
-  console.log(response.body);
+
+  const buffer = Buffer.from(response.body,'utf-8');
+  fs.writeFileSync('./exports/export.pptx', buffer);
 });

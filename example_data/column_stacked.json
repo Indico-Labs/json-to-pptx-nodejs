@@ -1,0 +1,70 @@
+{
+   "base_settings":{
+      "file_name":"column_stacked_demo"
+   },
+   "body":[
+      {
+         "table_text":"IceCream",
+         "question_text":"Which flavour of ice-cream is your favourite?",
+         "base_text":"All respondents",
+         "rows":[
+            "Chocolate",
+            "Vanilla",
+            "Strawberry",
+            "I don't like ice-cream",
+            "Other (please specify)"
+         ],
+         "columns":[
+            {
+               "text":"Total",
+               "items":[
+                  {
+                     "text":"Total",
+                     "base":100,
+                     "data":[
+                        40,
+                        30,
+                        15,
+                        45,
+                        25
+                     ]
+                  }
+               ]
+            },
+            {
+               "text":"Gender",
+               "items":[
+                  {
+                     "text":"Male",
+                     "base":100,
+                     "data":[
+                        40,
+                        30,
+                        15,
+                        10,
+                        25
+                     ]
+                  },
+                  {
+                     "text":"Female",
+                     "base":100,
+                     "data":[
+                        40,
+                        30,
+                        15,
+                        45,
+                        50
+                     ]
+                  }
+               ]
+            }
+         ],
+         "view_settings":{
+            "slide_master_index":0,
+            "slide_layout_index":0,
+            "placeholder_index":0,
+            "chart_type":"column_stacked"
+         }
+      }
+   ]
+}
