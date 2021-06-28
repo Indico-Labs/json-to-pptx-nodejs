@@ -1,9 +1,9 @@
 var request = require('request');
 const fs = require('fs');
 
-var data = require('./example_data/bar.json')
+var data = require('./example_data/appinio.json')
 
-var token = 'YOUR_TOKEN'
+var token = ''
 
 var options = {
   'method': 'POST',
@@ -19,5 +19,5 @@ request(options, function (error, response) {
   if (error) throw new Error(error);
 
   const buffer = Buffer.from(response.body,'utf-8');
-  fs.writeFileSync('./exports/export.pptx', buffer);
+  fs.writeFileSync('./exports/'+data['base_settings']['file_name']+'.pptx', buffer);
 });
