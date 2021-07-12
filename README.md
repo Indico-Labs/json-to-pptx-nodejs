@@ -28,8 +28,5 @@
 
 `$ node create_pptx.js`
 
-- Perform the request
-
-`$ node index.js`
-
+- Check the exported pptx on the `/exports/`
 
