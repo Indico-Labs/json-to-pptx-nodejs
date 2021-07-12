@@ -1,13 +1,13 @@
 var request = require('request');
 const fs = require('fs');
 
-var data = require('./example_data/appinio.json')
+var data = require('./example_data/template.json')
 
 var token = ''
 
 var options = {
   'method': 'POST',
-  'url': 'https://staging-api-pptxbuilder.herokuapp.com/api/v1/convert',
+  'url': 'https://api.pptxbuilder.com/api/v1/convert',
   'headers': {
     'Authorization': 'Bearer '+token,
     'Content-Type': 'application/json'

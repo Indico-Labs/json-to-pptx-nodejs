@@ -12,6 +12,12 @@
 
 `$ node get_token.js`
 
+### Update a authentication token
+- Replace your credentials in `update_token.js`
+- Run the script
+
+`$ node update_token.js`
+
 ### Create a pptx
 - Replace your authorization jwt token in `create_pptx.js` 
 - Select your data and template file:
