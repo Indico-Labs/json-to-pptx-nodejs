@@ -1,16 +1,29 @@
 ## Example of usage for API integration
 
 ### Json to PPTX Builder
+- For more detailed information check out our documentation at http://docs.pptxbuilder.com
 
-- Clone the repo
-`git clone `
+### Install the dependencies
+`$ npm install`
 
-- Install the dependencies
-`npm install`
+### Get a authentication token
+- Replace your credentials in `get_token.js`
+- Run the script
 
-- Replace your authorization token in `index.js` 
-If you do not have a token refer to: https://docs.pptxbuilder.com/guide/get-api-token
+`$ node get_token.js`
+
+### Create a pptx
+- Replace your authorization jwt token in `create_pptx.js` 
+- Select your data and template file:
+
+`var data = require('./example_data/appinio.json')`
+
+- Run the script
+
+`$ node create_pptx.js`
 
 - Perform the request
-`node index.js`
+
+`$ node index.js`
+
 
